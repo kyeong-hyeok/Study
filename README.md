@@ -2,7 +2,7 @@
 개인 공부 정리
 
 ### 📝 과목
-  - [`C`]
+  - [`C`](https://github.com/kyeong-hyeok/Study/tree/main/C)
 
   - [`자료구조`]
 
