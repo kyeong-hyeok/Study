@@ -7,7 +7,7 @@ C 프로그래밍 공부
 
 | 목차 | 내용정리 |
 |:---:|:---:|
-| 1 |  [C 복습] |
+| 1 |  [C 복습](https://github.com/kyeong-hyeok/Study/tree/main/C/C%20%EB%B3%B5%EC%8A%B5) |
 | 2 | [포인터] |
 | 3 | [문자열] |
 | 4 | [구조체] |
