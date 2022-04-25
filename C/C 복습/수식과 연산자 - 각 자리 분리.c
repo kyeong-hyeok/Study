@@ -9,4 +9,5 @@ int main(void) {
   t=(num%100)/10;
   o=(num%10);
   printf("%dTTHO %dTHO %dHUN %dTEN %d", tt, th, hu, t, o);
+  return 0;
 }
