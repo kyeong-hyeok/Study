@@ -9,4 +9,5 @@ int main(void) {
     printf("%c", alp+32);
   else
     printf("none");
+  return 0;
 }
