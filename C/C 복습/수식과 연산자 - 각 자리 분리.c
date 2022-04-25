@@ -7,7 +7,7 @@ int main(void) {
   th=(num%10000)/1000;
   hu=(num%1000)/100;
   t=(num%100)/10;
-  o=(num%10);
+  o=num%10;
   printf("%dTTHO %dTHO %dHUN %dTEN %d", tt, th, hu, t, o);
   return 0;
 }
