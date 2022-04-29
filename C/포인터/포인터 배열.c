@@ -7,6 +7,6 @@ int main(void) {
   p[2] = c;
   printf("%p %d\n", &p[0], *p[0]);
   printf("%p %d\n", &p[1], *p[1]);
-  printf("%p %d\n", &p, *p[2]);
+  printf("%p %d\n", &p[2], *p[2]);
   return 0;
 }
