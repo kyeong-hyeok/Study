@@ -11,7 +11,7 @@ int main(void) {
   scanf("%d", &d);
   p = (int *)realloc(p,(n-d)*sizeof(int));
   for(i=0;i<n-d;i++)
-    printf("%d", p[i]);
+    printf("%d\n", p[i]);
   free(p);
   return 0;
 }
