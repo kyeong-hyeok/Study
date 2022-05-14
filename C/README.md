@@ -5,8 +5,8 @@ C 프로그래밍 공부
 - C 내용 복습
 - 고급 C 내용 정리
 
-| 목차 | 내용정리 |
-|:---:|:---:|
+| 목차 | 내용정리 | 실습문제 |
+|:---:|:---:|:---:|
 | 1 |  [C 복습](https://github.com/kyeong-hyeok/Study/tree/main/C/C%20%EB%B3%B5%EC%8A%B5) |
 | 2 | [포인터](https://github.com/kyeong-hyeok/Study/tree/main/C/%ED%8F%AC%EC%9D%B8%ED%84%B0) |
 | 3 | [문자열](https://github.com/kyeong-hyeok/Study/tree/main/C/%EB%AC%B8%EC%9E%90%EC%97%B4) |
