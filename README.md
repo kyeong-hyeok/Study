@@ -4,7 +4,7 @@
 ### 📝 과목
   - [`C`](https://github.com/kyeong-hyeok/Study/tree/main/C)
 
-  - [`자료구조`]
+  - [`자료구조`](https://github.com/kyeong-hyeok/Study/tree/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)
 
   - [`알고리즘`]
 
