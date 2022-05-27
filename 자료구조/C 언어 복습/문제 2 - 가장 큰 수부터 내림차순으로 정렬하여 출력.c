@@ -2,7 +2,7 @@
 
 void ABC(int a[], int k) {
 	int i, max = a[k], inx = k, tmp;
-	for (i = k+1; i <= 10; i++) {
+	for (i = k+1; i < 10; i++) {
 		if (a[i] > max) {
 			max = a[i];
 			inx = i;
@@ -16,7 +16,7 @@ void ABC(int a[], int k) {
 int main(void) {
 	int i, a[10], k=0;
 	for (i = 0; i < 10; i++)
-		scanf_s("%d", &a[i]);
+		scanf("%d", &a[i]);
 	for (i = 0; i < 9; i++) {
 		ABC(a, k);
 		k++;
