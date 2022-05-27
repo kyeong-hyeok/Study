@@ -16,7 +16,7 @@
  
   - [`고급C 프로그래밍 및 실습`](https://github.com/sejongresearch/2019.Fall.AdvancedC)
 
-  - [`자료구조`](https://github.com/sejongresearch/2020.Spring.DataStructure))
+  - [`자료구조`](https://github.com/sejongresearch/2020.Spring.DataStructure)
  
   - [`인프런 - 스프링 핵심 원리 기본편`]
 
