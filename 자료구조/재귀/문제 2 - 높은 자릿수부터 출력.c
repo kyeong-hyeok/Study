@@ -13,7 +13,7 @@ void digits(int n) {
 
 int main(void) {
 	int n;
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 	digits(n);
 	return 0;
 }
