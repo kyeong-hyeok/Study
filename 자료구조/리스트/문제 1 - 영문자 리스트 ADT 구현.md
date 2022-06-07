@@ -48,9 +48,9 @@ Node* add(Node* head, int r, char e) {
 		p = p->next;
 	}
 	if ((r < 1) || (r > n)) {
-    printf("invalid position");
+    		printf("invalid position");
 		return 0;
-  }
+  	}
   else {
 	p = head;
 	for (i = 1; i <= r - 1; i++)  // 순위가 r인 노드까지 이동
@@ -73,9 +73,9 @@ char delete(Node* head, int r) {
 		p = p->next;
 	}
 	if ((r < 1) || (r > n)) {
-    printf("invalid position");
+    		printf("invalid position");
 		return 0;
-  }
+  	}
   else {
 	p = head;
 	for (i = 1; i <= r; i++)  // 순위가 r인 노드까지 이동
@@ -96,15 +96,15 @@ char get(Node* head, int r) {
 		p = p->next;
 	}
 	if ((r < 1) || (r > n)) {
-    printf("invalid position");
+    		printf("invalid position");
 		return 0;
-  }
+  	}
   else {
 	p = head;
 	for (i = 1; i <= r; i++)  // 순위가 r인 노드까지 이동
 		p = p->next;
 	return p->elem;
-    }
+   	}
 }
 
 void print(Node* head) {
@@ -126,9 +126,8 @@ int main(void) {
 	trail->prev = head;
 	trail->next = NULL;
 	scanf("%d", &n);
-  while(getchar() != '\n');
 	for (i = 0; i < n; i++) {
-    while(getchar() != '\n');
+    	while(getchar() != '\n');
 		if (k == 'A') {
 			scanf("%c %d %c", &k, &r, &elem);
 			add(head, r, elem);
