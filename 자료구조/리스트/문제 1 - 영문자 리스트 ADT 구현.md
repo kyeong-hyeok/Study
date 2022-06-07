@@ -148,4 +148,135 @@ int main(void) {
 }
 ```
 
+LIST 라는 구조체를 만든 후, 구조체 포인터를 매개변수로 사용하여 함수를 호출하였는데 똑같이 P에서 출력을 하지 않았다. 이유는?
+
+```C
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+typedef struct node {
+	struct node* next;
+	struct node* prev;
+	char elem;
+}Node;
+
+typedef struct LIST {
+	Node* head;
+	Node* trail;
+}LIST;
+
+void init(LIST* list) {
+	list->head = (Node*)malloc(sizeof(Node));
+	list->trail = (Node*)malloc(sizeof(Node));
+	list->head->next = list->trail;
+	list->head->prev = NULL;
+	list->trail->prev = list->head;
+	list->trail->next = NULL;
+}
+
+void add(LIST* list, int r, char e) {
+	int i, n = 0;
+	Node* p, * q;
+	p = list->head->next;
+	q = (Node*)malloc(sizeof(Node));
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	if ((r < 1) || (r > n)) {
+		printf("invalid position");
+	}
+	else {
+		p = list->head;
+		for (i = 1; i <= r - 1; i++)  // 순위가 r인 노드까지 이동
+			p = p->next;
+		q->elem = e;  // q의 원소에 e 대입
+		q->prev = p->prev;  // 연결
+		q->next = p;
+		(p->prev)->next = q;
+		p->prev = q;
+		n += 1;
+	}
+}
+void delete(LIST* list, int r) {
+	int n = 0, i;
+	char e;
+	Node* p = list->head->next;
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	if ((r < 1) || (r > n)) {
+		printf("invalid position");
+	}
+	else {
+		p = list->head;
+		for (i = 1; i <= r; i++)  // 순위가 r인 노드까지 이동
+			p = p->next;
+		e = p->elem;
+		(p->prev)->next = p->next;
+		(p->next)->prev = p->prev;
+		free(p);
+		n -= 1;
+	}
+}
+
+char get(LIST* list, int r) {
+	int n = 0, i;
+	Node* p = list->head->next;
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	if ((r < 1) || (r > n)) {
+		printf("invalid position");
+		return 0;
+	}
+	else {
+		p = list->head;
+		for (i = 1; i <= r; i++)  // 순위가 r인 노드까지 이동
+			p = p->next;
+		return p->elem;
+	}
+}
+
+void print(LIST* list) {
+	int n = 0, i;
+	Node* p = list->head;
+	for (i = 1; i <= n; i++) {
+		p = p->next;
+		printf("%c", p->elem);
+	}
+	printf("\n");
+}
+
+int main(void) {
+	int n, r, i;
+	char k=0, elem;
+	LIST list;
+	init(&list);
+	scanf("%d", &n);
+	while (getchar() != '\n');
+	for (i = 0; i < n; i++) {
+		while (getchar() != '\n');
+		if (k == 'A') {
+			scanf("%c %d %c", &k, &r, &elem);
+			add(&list, r, elem);
+		}
+		else if (k == 'D') {
+			scanf("%c %d", &k, &r);
+			delete(&list, r);
+		}
+		else if (k == 'G') {
+			scanf("%c %d", &k, &r);
+			get(&list, r);
+		}
+		else if (k == 'P') {
+			print(&list);
+		}
+	}
+	return 0;
+}
+```
 <br>
