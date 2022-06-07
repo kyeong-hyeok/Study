@@ -279,4 +279,148 @@ int main(void) {
 	return 0;
 }
 ```
+scanf를 사용할 때 공백을 getchar()으로 잡아줌.
+n의 값에 따른 함수의 실행 여부 확인
+
+```C
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+typedef struct node {
+	struct node* next;
+	struct node* prev;
+	char elem;
+}Node;
+
+typedef struct LIST {
+	Node* head;
+	Node* trail;
+}LIST;
+
+void init(LIST* list) {
+	list->head = (Node*)malloc(sizeof(Node));
+	list->trail = (Node*)malloc(sizeof(Node));
+	list->head->next = list->trail;
+	list->head->prev = NULL;
+	list->trail->prev = list->head;
+	list->trail->next = NULL;
+}
+
+void add(LIST* list) {
+	int i, n = 0, r;
+	char e;
+	Node* p, * q;
+	scanf("%d %c", &r, &e);
+	getchar();
+	p = list->head->next;
+	q = (Node*)malloc(sizeof(Node));
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	if ((r < 1) || (r > n)) {
+		printf("invalid position\n");
+		return;
+	}
+	else {
+		p = list->head;
+		for (i = 1; i <= r ; i++)  // 순위가 r인 노드까지 이동
+			p = p->next;
+		q->elem = e;  // q의 원소에 e 대입
+		q->prev = p->prev;  // 연결
+		q->next = p;
+		(p->prev)->next = q;
+		p->prev = q;
+		n += 1;
+	}
+}
+void delete(LIST* list) {
+	int n = 0, i, r;
+	char e;
+	scanf("%d", &r);
+	getchar();
+	Node* p = list->head->next;
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	if ((r < 1) || (r > n)) {
+		printf("invalid position\n");
+		return;
+	}
+	else {
+		p = list->head;
+		for (i = 1; i <= r; i++)  // 순위가 r인 노드까지 이동
+			p = p->next;
+		e = p->elem;
+		(p->prev)->next = p->next;
+		(p->next)->prev = p->prev;
+		free(p);
+		n -= 1;
+	}
+}
+
+void get(LIST* list) {
+	int n = 0, i, r;
+	Node* p = list->head->next;
+	scanf("%d", &r);
+	getchar();
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	if ((r < 1) || (r >= n)) {
+		printf("invalid position\n");
+		return;
+	}
+	else {
+		p = list->head;
+		for (i = 1; i <= r; i++)  // 순위가 r인 노드까지 이동
+			p = p->next;
+		printf("%c\n", p->elem);
+	}
+}
+
+void print(LIST* list) {
+	int n = 0, i;
+	Node* p = list->head->next;
+	while (p != NULL) {
+		n++;
+		p = p->next;
+	}
+	p = list->head;
+	for (i = 1; i <= n; i++) {
+		p = p->next;
+		printf("%c", p->elem);
+	}
+	printf("\n");
+}
+
+int main(void) {
+	int n, i;
+	char k=0;
+	LIST* list=(LIST*)malloc(sizeof(LIST));
+	init(list);
+	scanf("%d", &n);
+	getchar();
+	for (i = 0; i < n; i++) {
+		scanf("%c", &k);
+		getchar();
+		if (k == 'A') {
+			add(list);
+		}
+		else if (k == 'D') {
+			delete(list);
+		}
+		else if (k == 'G') {
+			get(list);
+		}
+		else if (k == 'P') {
+			print(list);
+		}
+	}
+	return 0;
+}
+```
 <br>
