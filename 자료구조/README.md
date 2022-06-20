@@ -12,7 +12,7 @@
 | 3 | [재귀](https://github.com/kyeong-hyeok/Study/tree/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%9E%AC%EA%B7%80) | [실습](https://github.com/kyeong-hyeok/Study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%9E%AC%EA%B7%80/%EC%9E%AC%EA%B7%80%20%EC%8B%A4%EC%8A%B5%20%EB%AC%B8%EC%A0%9C.pdf) |
 | 4 | [기초 데이터 구조](https://github.com/kyeong-hyeok/Study/tree/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EA%B8%B0%EC%B4%88%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B5%AC%EC%A1%B0%20-%20%EB%B0%B0%EC%97%B4) | [실습](https://github.com/kyeong-hyeok/Study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EA%B8%B0%EC%B4%88%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B5%AC%EC%A1%B0%20-%20%EB%B0%B0%EC%97%B4/%EA%B8%B0%EC%B4%88%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B5%AC%EC%A1%B0%20-%20%EB%B0%B0%EC%97%B4%20%EC%8B%A4%EC%8A%B5%20%EB%AC%B8%EC%A0%9C.pdf) |
 | 5 | [리스트](https://github.com/kyeong-hyeok/Study/tree/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%A6%AC%EC%8A%A4%ED%8A%B8) | [실습] |
-| 6 | [집합] | [실습] |
+| 6 | [집합](https://github.com/kyeong-hyeok/Study/tree/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%A7%91%ED%95%A9) | [실습] |
 | 7 | [스택] |
 | 8 | [큐] |
 | 9 | [트리] |
