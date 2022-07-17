@@ -18,6 +18,6 @@
 
   - [`자료구조`](https://github.com/sejongresearch/2020.Spring.DataStructure)
  
+  - [`자바의 정석`](https://github.com/castello/javajungsuk_basic)
+
   - [`인프런 - 스프링 핵심 원리 기본편`]
-
-
