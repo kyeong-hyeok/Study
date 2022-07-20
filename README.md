@@ -8,7 +8,7 @@
 
   - [`알고리즘`]
 
-  - [`JAVA`]
+  - [`JAVA`](https://github.com/kyeong-hyeok/Study/tree/main/JAVA)
 
 <br>
 
