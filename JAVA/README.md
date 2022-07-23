@@ -1,4 +1,4 @@
-# C-Programming
+# JAVA-Programming
 JAVA 공부
 
 ## 학습 목표
