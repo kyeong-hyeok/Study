@@ -16,39 +16,17 @@ class Buyer {
     Product[] cart = new Product[3]; // 구입한 제품을 저장하기 위한 배열
     int i = 0; // Product cart index 배열 에 사용될
     void buy(Product p) {
-        if(p instanceof Tv) {
-            Tv t = new Tv();
-            if(money<t.price) {
-                System.out.println("잔액이 부족하여 "+t+"을/를 살 수 없습니다.");
-                return;
-            }
-            money-=t.price;
-            add(t);
+        if(money<p.price) {
+            System.out.println("잔액이 부족하여 "+p+"을/를 살 수 없습니다.");
+            return;
         }
-        if(p instanceof Computer) {
-            Computer c = new Computer();
-            if(money<c.price) {
-                System.out.println("잔액이 부족하여 "+c+"을/를 살 수 없습니다.");
-                return;
-            }
-            money-=c.price;
-            add(c);
-        }
-        if(p instanceof Audio) {
-            Audio a = new Audio();
-            if(money<a.price) {
-                System.out.println("잔액이 부족하여 "+a+"을/를 살 수 없습니다.");
-                return;
-            }
-            money-=a.price;
-            add(a);
-        }
+        money-=p.price;
+        add(p);
     }
     void add(Product p) {
         if(i>=cart.length) {
             Product[] cart2 = new Product[cart.length * 2];
-            for(int i=0; i< cart.length; i++)
-                cart2[i] = cart[i];
+            System.arraycopy(cart,0,cart2,0, cart.length);
             cart = cart2;
         }
         cart[i++] = p;
