@@ -70,7 +70,7 @@ int isOperand(char s) {
 	char array[10] = { '0','1','2','3','4','5','6','7','8','9' };
 	for (int i = 0; i < 10; i++) {
 		if (s == array[i])
-			return i;
+			return 1;
 	}
 	return 0;
 }
