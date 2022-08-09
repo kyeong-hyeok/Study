@@ -37,6 +37,7 @@ void print(treeNode* v) {
 }
 
 int main() {
+	int n;
 	treeNode* f7 = insertNode(130, NULL, NULL);
 	treeNode* f8 = insertNode(80, NULL, NULL);
 	treeNode* f6 = insertNode(120, f7, f8);
@@ -45,7 +46,6 @@ int main() {
 	treeNode* f2 = insertNode(30, f4, f5);
 	treeNode* f3 = insertNode(50, NULL, f6);
 	treeNode* f1 = insertNode(20, f2, f3);
-	int n;
 	scanf("%d", &n);
 	switch (n) {
 	case 1:
