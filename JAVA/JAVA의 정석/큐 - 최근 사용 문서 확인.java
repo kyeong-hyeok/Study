@@ -14,9 +14,9 @@ public class EX {
                 if (input.equalsIgnoreCase("q"))
                     System.exit(0);
                 else if (input.equalsIgnoreCase("help")) {
-                    System.out.println("help - 도움말");
-                    System.out.println("q - 프로그램 종료");
-                    System.out.println("history - 최근 입력 명령어를" + MAX_SIZE + "개 보여줍니다.");
+                    System.out.println("help or HELP - 도움말");
+                    System.out.println("q or Q - 프로그램 종료");
+                    System.out.println("history or HISTORY- 최근 입력 명령어를" + MAX_SIZE + "개 보여줍니다.");
                 } else if (input.equalsIgnoreCase("history")) {
                     save(input);
                     LinkedList list = (LinkedList) q;
